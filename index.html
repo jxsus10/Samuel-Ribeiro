@@ -1,0 +1,2927 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Ribeiro — Residências de Alto Padrão • Riviera de São Lourenço</title>
+  <meta name="description" content="Curadoria independente e assessoria imobiliária especializada em casas de altíssimo padrão na Riviera de São Lourenço. Atendimento sob medida com Samuel Ribeiro (CRECI 213222-F)." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./Resources/logo.png" />
+
+  <!-- Google Fonts: Fraunces (warm editorial serif) + Plus Jakarta Sans (humanist geometric sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,300;1,9..144,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       QUIET LUXURY ARCHITECTURAL SYSTEM
+       Warm Limestone, Midnight Basalt & Hairline Precision
+       ========================================================================== */
+    :root {
+      --canvas: #F7F5F0;             /* Luminous warm limestone */
+      --canvas-alt: #EFECE4;         /* Soft travertine stone */
+      --canvas-dark: #101214;        /* Deep volcanic midnight basalt */
+      --canvas-dark-surface: #17191C;
+      
+      --ink: #16171A;                /* Deep basalt charcoal */
+      --ink-muted: #56544F;          /* Warm stone slate */
+      --ink-faint: #8E8B83;          /* Sand slate */
+      --ink-light: #F7F5F0;          /* Inverted light text */
+      --ink-light-muted: #A3A199;
+      
+      --accent: #9A7B56;             /* Coastal burnished bronze */
+      --accent-light: #E8D6BF;       /* Warm champagne light */
+      --accent-hover: #7E6140;
+      --sage: #6B7962;               /* Atlantic forest sage green */
+
+      --hairline: rgba(22, 23, 26, 0.12);
+      --hairline-dark: rgba(247, 245, 240, 0.12);
+      --hairline-subtle: rgba(22, 23, 26, 0.06);
+
+      --font-serif: 'Fraunces', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+      --gutter: clamp(1.5rem, 5vw, 4.75rem);
+      --max-w: 1400px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--canvas);
+      color: var(--ink);
+    }
+
+    body {
+      background-color: var(--canvas);
+      color: var(--ink);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* Accessibility */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    select:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    ::selection {
+      background: var(--ink);
+      color: var(--canvas);
+    }
+
+    .wrap {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+    }
+
+    .hairline-rule {
+      border: none;
+      border-top: 1px solid var(--hairline);
+      width: 100%;
+    }
+
+    .hairline-rule-dark {
+      border: none;
+      border-top: 1px solid var(--hairline-dark);
+      width: 100%;
+    }
+
+    /* Typography Helpers */
+    .font-serif {
+      font-family: var(--font-serif);
+    }
+
+    .section-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 18px;
+      height: 1px;
+      background-color: var(--accent);
+    }
+
+    .section-eyebrow-dark {
+      color: var(--ink-light-muted);
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.1rem, 4vw, 3.5rem);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .section-title-dark {
+      color: var(--ink-light);
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    /* ==========================================================================
+       1. TOP ARCHITECTURAL UTILITY BAR & NAVIGATION
+       ========================================================================== */
+    .top-utility-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 60;
+      background-color: rgba(16, 18, 20, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      padding: 0.45rem var(--gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+    }
+
+    .top-utility-left {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .live-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .live-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--sage);
+      box-shadow: 0 0 6px var(--sage);
+      animation: pulseDot 2.5s infinite;
+    }
+
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(0.85); }
+    }
+
+    .top-utility-right {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    /* Main Navigation Bar */
+    .nav-bar {
+      position: fixed;
+      top: 32px;
+      left: 0;
+      width: 100%;
+      z-index: 50;
+      padding: 1.25rem var(--gutter);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background-color 0.4s ease, top 0.4s ease, padding 0.4s ease, border-color 0.4s ease;
+    }
+
+    .nav-bar.scrolled {
+      top: 0;
+      background-color: rgba(247, 245, 240, 0.96);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 1rem var(--gutter);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-logo-img {
+      height: 32px;
+      width: auto;
+      object-contain: fit;
+      filter: invert(1) brightness(0.1);
+      transition: filter 0.3s ease;
+    }
+
+    .nav-bar:not(.scrolled) .brand-logo-img {
+      filter: brightness(1) invert(0);
+    }
+
+    .brand-name {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.015em;
+    }
+
+    .nav-bar:not(.scrolled) .brand-name {
+      color: #FFFFFF;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 2.25rem;
+      list-style: none;
+    }
+
+    @media (min-width: 900px) {
+      .nav-links {
+        display: flex;
+      }
+    }
+
+    .nav-links a {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--ink-muted);
+      position: relative;
+      transition: color 0.25s ease;
+    }
+
+    .nav-bar:not(.scrolled) .nav-links a {
+      color: rgba(255, 255, 255, 0.9);
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.6rem 1.25rem;
+      border: 1px solid currentColor;
+      transition: all 0.3s ease;
+    }
+
+    .nav-bar:not(.scrolled) .nav-contact-link {
+      color: #FFFFFF;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .nav-bar:not(.scrolled) .nav-contact-link:hover {
+      background-color: #FFFFFF;
+      color: var(--ink);
+      border-color: #FFFFFF;
+    }
+
+    .nav-bar.scrolled .nav-contact-link {
+      color: var(--ink);
+      border-color: var(--hairline);
+    }
+
+    .nav-bar.scrolled .nav-contact-link:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ==========================================================================
+       2. CINEMATIC HERO SECTION
+       Full-viewport ambient video, asymmetric typography, orchestrated reveal
+       ========================================================================== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      padding-top: 140px;
+      padding-bottom: clamp(3.5rem, 8vh, 6.5rem);
+      overflow: hidden;
+      color: #FFFFFF;
+    }
+
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1.05);
+      animation: heroScaleSettle 2.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      filter: brightness(0.78) contrast(1.06);
+    }
+
+    @keyframes heroScaleSettle {
+      to { transform: scale(1); }
+    }
+
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to top,
+        rgba(12, 14, 16, 0.88) 0%,
+        rgba(12, 14, 16, 0.45) 45%,
+        rgba(12, 14, 16, 0.35) 100%
+      );
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 920px;
+      margin-right: auto;
+    }
+
+    .hero-badge {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: heroFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(3rem, 6.5vw, 5.75rem);
+      font-weight: 300;
+      line-height: 1.04;
+      letter-spacing: -0.025em;
+      margin-bottom: 1.75rem;
+      opacity: 0;
+      transform: translateY(24px);
+      animation: heroFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.6);
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--accent-light);
+    }
+
+    .hero-summary {
+      font-size: clamp(15px, 1.4vw, 17px);
+      line-height: 1.65;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 620px;
+      font-weight: 300;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: heroFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.7s forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1.25rem;
+      opacity: 0;
+      transform: translateY(18px);
+      animation: heroFadeUp 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.9s forwards;
+    }
+
+    @keyframes heroFadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn-hero-primary {
+      background-color: #FFFFFF;
+      color: var(--ink);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.95rem 2rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-hero-primary:hover {
+      background-color: var(--accent-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-hero-secondary {
+      background: transparent;
+      color: #FFFFFF;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.95rem 2rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: all 0.3s ease;
+    }
+
+    .btn-hero-secondary:hover {
+      border-color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       3. ABOUT & CURATOR (SAMUEL RIBEIRO)
+       Asymmetric split, authentic portrait, plain metrics
+       ========================================================================== */
+    .section-about {
+      padding: clamp(5rem, 10vw, 9rem) 0;
+      background-color: var(--canvas);
+    }
+
+    .about-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .about-split {
+        grid-template-columns: 460px 1fr;
+        gap: clamp(3rem, 6vw, 7rem);
+      }
+    }
+
+    .curator-portrait-box {
+      position: relative;
+      overflow: hidden;
+      background-color: var(--canvas-alt);
+      border: 1px solid var(--hairline);
+    }
+
+    .curator-portrait {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      filter: contrast(1.02);
+    }
+
+    .curator-caption {
+      padding: 1.25rem 1.5rem;
+      border-top: 1px solid var(--hairline);
+      background-color: #FFFFFF;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .curator-name {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .curator-tag {
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .about-text-column {
+      max-width: 780px;
+    }
+
+    .about-lead {
+      font-family: var(--font-serif);
+      font-size: clamp(1.85rem, 3.2vw, 2.85rem);
+      font-weight: 300;
+      line-height: 1.22;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+      margin-bottom: 2rem;
+    }
+
+    .about-body {
+      font-size: clamp(15px, 1.2vw, 16px);
+      line-height: 1.78;
+      color: var(--ink-muted);
+      font-weight: 400;
+    }
+
+    .about-body p + p {
+      margin-top: 1.5rem;
+    }
+
+    .curator-stats-grid {
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--hairline);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem 1.5rem;
+    }
+
+    @media (min-width: 600px) {
+      .curator-stats-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    .stat-entry-number {
+      font-family: var(--font-serif);
+      font-size: clamp(1.85rem, 2.8vw, 2.5rem);
+      font-weight: 400;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+    }
+
+    .stat-entry-label {
+      font-size: 11px;
+      color: var(--ink-faint);
+      margin-top: 0.35rem;
+      letter-spacing: 0.04em;
+    }
+
+    /* ==========================================================================
+       4. RESIDÊNCIAS — THE MONOGRAPH COLLECTION
+       Filters, Horizontal Track & Spec-Sheets
+       ========================================================================== */
+    .section-collection {
+      padding: clamp(5rem, 9vw, 8.5rem) 0;
+      background-color: var(--canvas-alt);
+      border-top: 1px solid var(--hairline);
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    .collection-header-row {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .collection-header-row {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+    }
+
+    .filter-pills-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .filter-pill {
+      background: transparent;
+      border: 1px solid var(--hairline);
+      color: var(--ink-muted);
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 1rem;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .filter-pill:hover,
+    .filter-pill.active {
+      border-color: var(--ink);
+      color: var(--ink);
+      background-color: #FFFFFF;
+    }
+
+    /* Carousel Actions Cluster & Chevron Navigation */
+    .collection-actions-cluster {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .carousel-nav-cluster {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      border-left: 1px solid var(--hairline);
+      padding-left: 1rem;
+    }
+
+    @media (max-width: 680px) {
+      .carousel-nav-cluster {
+        border-left: none;
+        padding-left: 0;
+      }
+    }
+
+    .carousel-nav-btn {
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #FFFFFF;
+      border: 1px solid var(--hairline);
+      color: var(--ink);
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .carousel-nav-btn:hover:not(:disabled) {
+      background: var(--ink);
+      color: #FFFFFF;
+      border-color: var(--ink);
+      transform: translateY(-1px);
+    }
+
+    .carousel-nav-btn:disabled,
+    .carousel-nav-btn.disabled {
+      opacity: 0.28;
+      cursor: not-allowed;
+      border-color: var(--hairline-subtle);
+    }
+
+    /* Gallery Track Wrapper & Floating Side Chevrons */
+    .gallery-track-wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    .gallery-floating-arrow {
+      position: absolute;
+      top: 36%;
+      transform: translateY(-50%);
+      z-index: 25;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(247, 245, 240, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid var(--hairline);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 8px 24px -4px rgba(22, 23, 26, 0.16);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .gallery-floating-arrow.prev {
+      left: 1rem;
+    }
+
+    .gallery-floating-arrow.next {
+      right: 1rem;
+    }
+
+    @media (min-width: 1024px) {
+      .gallery-floating-arrow.prev {
+        left: 1.5rem;
+      }
+      .gallery-floating-arrow.next {
+        right: 1.5rem;
+      }
+    }
+
+    .gallery-floating-arrow:hover:not(:disabled) {
+      background: var(--ink);
+      color: #FFFFFF;
+      border-color: var(--ink);
+      transform: translateY(-50%) scale(1.08);
+      box-shadow: 0 14px 32px -4px rgba(22, 23, 26, 0.28);
+    }
+
+    .gallery-floating-arrow:disabled,
+    .gallery-floating-arrow.disabled {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(-50%) scale(0.85);
+    }
+
+    .gallery-horizontal-track {
+      display: flex;
+      gap: 2.25rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 2rem;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      margin-left: calc(-1 * var(--gutter));
+      margin-right: calc(-1 * var(--gutter));
+      padding-left: var(--gutter);
+      padding-right: var(--gutter);
+    }
+
+    .gallery-horizontal-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .residence-card {
+      flex: 0 0 clamp(320px, 38vw, 460px);
+      scroll-snap-align: start;
+      background: #FFFFFF;
+      border: 1px solid var(--hairline);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .residence-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 16px 36px -12px rgba(22, 23, 26, 0.08);
+    }
+
+    .residence-image-box {
+      width: 100%;
+      aspect-ratio: 16 / 11;
+      position: relative;
+      overflow: hidden;
+      background-color: var(--canvas);
+      cursor: pointer;
+    }
+
+    .residence-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .residence-card:hover .residence-image {
+      transform: scale(1.035);
+    }
+
+    .residence-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(16, 18, 20, 0.82);
+      backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.65rem;
+    }
+
+    .residence-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .residence-title {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.2;
+      color: var(--ink);
+      margin-bottom: 0.25rem;
+      letter-spacing: -0.015em;
+    }
+
+    .residence-location {
+      font-size: 12px;
+      color: var(--ink-faint);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Spec Sheet Rows */
+    .spec-table {
+      border-top: 1px solid var(--hairline);
+      margin-bottom: 1.5rem;
+    }
+
+    .spec-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--hairline-subtle);
+      font-size: 12px;
+    }
+
+    .spec-line-key {
+      color: var(--ink-faint);
+    }
+
+    .spec-line-val {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .residence-footer-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      border-top: 1px solid var(--hairline);
+      padding-top: 1.25rem;
+    }
+
+    .price-value {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+    }
+
+    .btn-inspect {
+      background: none;
+      border: 1px solid var(--hairline);
+      font-family: var(--font-sans);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 0.55rem 1rem;
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-inspect:hover {
+      border-color: var(--ink);
+      background-color: var(--ink);
+      color: #FFFFFF;
+    }
+
+    /* ==========================================================================
+       5. RIVIERA CINEMA SUITE (TRIPLE-VIDEO CONTROLS)
+       vid3 (Coast & Drone), vid2 (Vlog & Tour), vid1 (Architecture & Light)
+       ========================================================================== */
+    .section-cinema {
+      background-color: var(--canvas-dark);
+      color: var(--ink-light);
+      padding: clamp(5.5rem, 10vw, 9rem) 0;
+      position: relative;
+    }
+
+    .cinema-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    @media (min-width: 960px) {
+      .cinema-layout {
+        grid-template-columns: 1.4fr 1fr;
+        gap: clamp(3rem, 6vw, 6rem);
+      }
+    }
+
+    .video-deck-frame {
+      position: relative;
+      background: #000000;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border: 1px solid var(--hairline-dark);
+    }
+
+    .video-element {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* Custom Video Controls Bar */
+    .cinema-controls-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+      padding: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      z-index: 20;
+    }
+
+    .cinema-ctrl-btn {
+      background: none;
+      border: none;
+      color: #FFFFFF;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      opacity: 0.85;
+      transition: opacity 0.2s ease;
+    }
+
+    .cinema-ctrl-btn:hover {
+      opacity: 1;
+    }
+
+    .cinema-channel-tabs {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .cinema-tab-item {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--hairline-dark);
+      padding: 1.25rem 1.5rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+
+    .cinema-tab-item:hover,
+    .cinema-tab-item.active {
+      background: rgba(255, 255, 255, 0.09);
+      border-color: var(--accent);
+    }
+
+    .cinema-tab-name {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      color: #FFFFFF;
+      margin-bottom: 0.2rem;
+    }
+
+    .cinema-tab-desc {
+      font-size: 12px;
+      color: var(--ink-light-muted);
+    }
+
+    .cinema-tab-pill {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+    }
+
+    /* ==========================================================================
+       6. ARCHITECTURAL MATERIALITY & DETAILS GALLERY
+       img1 to img5 showcasing natural textures
+       ========================================================================== */
+    .section-materials {
+      padding: clamp(5rem, 9vw, 8.5rem) 0;
+      background-color: var(--canvas);
+    }
+
+    .materials-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .material-tile {
+      position: relative;
+      overflow: hidden;
+      background-color: var(--canvas-alt);
+      border: 1px solid var(--hairline);
+      cursor: pointer;
+    }
+
+    .material-tile:nth-child(1) { grid-column: span 12; height: 380px; }
+    .material-tile:nth-child(2) { grid-column: span 12; height: 320px; }
+    .material-tile:nth-child(3) { grid-column: span 12; height: 320px; }
+    .material-tile:nth-child(4) { grid-column: span 12; height: 320px; }
+    .material-tile:nth-child(5) { grid-column: span 12; height: 320px; }
+
+    @media (min-width: 768px) {
+      .material-tile:nth-child(1) { grid-column: span 7; height: 440px; }
+      .material-tile:nth-child(2) { grid-column: span 5; height: 440px; }
+      .material-tile:nth-child(3) { grid-column: span 4; height: 360px; }
+      .material-tile:nth-child(4) { grid-column: span 4; height: 360px; }
+      .material-tile:nth-child(5) { grid-column: span 4; height: 360px; }
+    }
+
+    .material-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .material-tile:hover .material-img {
+      transform: scale(1.035);
+    }
+
+    .material-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(16, 18, 20, 0.85) 0%, transparent 60%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 1.5rem;
+      color: #FFFFFF;
+      transition: opacity 0.3s ease;
+    }
+
+    .material-label {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      margin-bottom: 0.25rem;
+    }
+
+    .material-title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 400;
+    }
+
+    /* ==========================================================================
+       7. MARKET & TERRITORIAL SCARCITY
+       ========================================================================== */
+    .section-market {
+      padding: clamp(5rem, 9vw, 8.5rem) 0;
+      background-color: var(--canvas-alt);
+      border-top: 1px solid var(--hairline);
+    }
+
+    .market-split {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 840px) {
+      .market-split {
+        grid-template-columns: 1.25fr 1fr;
+        gap: clamp(3rem, 6vw, 7rem);
+      }
+    }
+
+    .market-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1.9rem, 3.4vw, 3rem);
+      font-weight: 300;
+      line-height: 1.25;
+      letter-spacing: -0.015em;
+      color: var(--ink);
+    }
+
+    .market-quote em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .market-text {
+      color: var(--ink-muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    .market-text p + p {
+      margin-top: 1.5rem;
+    }
+
+    /* ==========================================================================
+       8. DIGITAL AUTHORITY TILES
+       YouTube & Instagram channel rows
+       ========================================================================== */
+    .section-digital {
+      padding: clamp(4.5rem, 8vw, 7.5rem) 0;
+      background-color: var(--canvas);
+    }
+
+    .digital-tile-link {
+      display: flex;
+      flex-direction: column;
+      padding: 2.25rem 0;
+      border-bottom: 1px solid var(--hairline);
+      text-decoration: none;
+      color: inherit;
+      transition: padding-left 0.3s ease;
+    }
+
+    @media (min-width: 720px) {
+      .digital-tile-link {
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+      }
+    }
+
+    .digital-tile-link:hover {
+      padding-left: 0.85rem;
+    }
+
+    .digital-tile-link:hover .tile-hover-arrow {
+      transform: translateX(8px);
+      color: var(--accent);
+    }
+
+    .channel-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.6rem, 2.4vw, 2.25rem);
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.35rem;
+    }
+
+    .channel-sub {
+      font-size: 13px;
+      color: var(--ink-muted);
+      max-width: 580px;
+    }
+
+    .tile-hover-arrow {
+      font-size: 16px;
+      transition: transform 0.25s ease, color 0.25s ease;
+      color: var(--ink-faint);
+    }
+
+    /* ==========================================================================
+       9. PRIVATE CONCIERGE & MINIMAL CONTACT FORM
+       ========================================================================== */
+    .section-contact {
+      padding: clamp(5rem, 10vw, 9rem) 0;
+      background-color: var(--canvas-alt);
+      border-top: 1px solid var(--hairline);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+
+    @media (min-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1.15fr 1fr;
+        gap: clamp(3rem, 6vw, 7.5rem);
+      }
+    }
+
+    .form-minimal-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 2.25rem;
+      margin-top: 2rem;
+    }
+
+    .form-minimal-group {
+      position: relative;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.25rem;
+    }
+
+    .field-underline-input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid var(--hairline);
+      padding: 0.75rem 0 0.5rem;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--ink);
+      outline: none;
+      border-radius: 0;
+      transition: border-bottom-color 0.25s ease;
+    }
+
+    .field-underline-input:focus {
+      border-bottom-color: var(--ink);
+    }
+
+    select.field-underline-input {
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2316171A' stroke-width='1.5'%3e%3cpath d='M6 9l6 6 6-6'/%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 0 center;
+      background-size: 14px;
+    }
+
+    .btn-submit-inquiry {
+      align-self: flex-start;
+      background: var(--ink);
+      color: var(--canvas);
+      border: 1px solid var(--ink);
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 1.1rem 2.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .btn-submit-inquiry:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .contact-channels-table {
+      border-top: 1px solid var(--hairline);
+      margin-top: 2rem;
+    }
+
+    .channel-line {
+      display: flex;
+      flex-direction: column;
+      padding: 1.35rem 0;
+      border-bottom: 1px solid var(--hairline);
+    }
+
+    @media (min-width: 480px) {
+      .channel-line {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+    }
+
+    .channel-line-key {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 0.25rem;
+    }
+
+    @media (min-width: 480px) {
+      .channel-line-key {
+        margin-bottom: 0;
+      }
+    }
+
+    .channel-line-val {
+      font-size: 14px;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    a.channel-line-val:hover {
+      color: var(--accent);
+    }
+
+    /* ==========================================================================
+       10. ARCHITECTURAL INSPECTION MODAL (DOSSIÊ PRIVATIVO)
+       ========================================================================== */
+    .inspection-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      background-color: rgba(16, 18, 20, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .inspection-modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .inspection-modal-sheet {
+      background: #FFFFFF;
+      width: 100%;
+      max-width: 980px;
+      max-height: 90vh;
+      overflow-y: auto;
+      border: 1px solid var(--hairline);
+      position: relative;
+      transform: translateY(20px);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .inspection-modal-backdrop.open .inspection-modal-sheet {
+      transform: translateY(0);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--hairline);
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 30;
+      font-size: 16px;
+      transition: all 0.2s ease;
+    }
+
+    .modal-close-btn:hover {
+      background: var(--ink);
+      color: #FFFFFF;
+    }
+
+    .modal-photo-container {
+      width: 100%;
+      height: 420px;
+      background: var(--canvas-alt);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .modal-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-content-body {
+      padding: clamp(1.75rem, 4vw, 3rem);
+    }
+
+    /* ==========================================================================
+       11. UNDERSTATED EDGE WHATSAPP TAB & FOOTER
+       ========================================================================== */
+    .edge-tab-anchor {
+      position: fixed;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      background-color: var(--ink);
+      color: var(--canvas);
+      padding: 1.25rem 0.65rem;
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      z-index: 45;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      transition: all 0.25s ease;
+      box-shadow: -2px 0 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .edge-tab-anchor:hover {
+      background-color: var(--accent);
+      transform: translateY(-50%) translateX(-2px);
+    }
+
+    .site-footer {
+      background-color: var(--canvas);
+      padding: 5rem 0 3.5rem;
+      border-top: 1px solid var(--hairline);
+      font-size: 12px;
+      color: var(--ink-faint);
+    }
+
+    .footer-top-row {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      margin-bottom: 3.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .footer-top-row {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+    }
+
+    .footer-brand-title {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      color: var(--ink);
+      font-weight: 400;
+    }
+
+    .footer-links-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .footer-links-list a {
+      color: var(--ink-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links-list a:hover {
+      color: var(--ink);
+    }
+
+    .footer-bottom-row {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--hairline-subtle);
+    }
+
+    @media (min-width: 640px) {
+      .footer-bottom-row {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ========================================================================= -->
+  <!-- 1. TOP UTILITY BAR (Live Riviera Clock & Local Info)                      -->
+  <!-- ========================================================================= -->
+  <aside class="top-utility-bar">
+    <div class="top-utility-left">
+      <div class="live-status-badge">
+        <span class="live-dot"></span>
+        <span id="liveClockText">Riviera de São Lourenço • Carregando...</span>
+      </div>
+      <span class="hidden sm:inline" style="color: rgba(255, 255, 255, 0.4);">|</span>
+      <span class="hidden sm:inline" style="color: rgba(255, 255, 255, 0.7);">24°C Céu Limpo • Bertioga, SP</span>
+    </div>
+
+    <div class="top-utility-right">
+      <span style="font-size: 11px; color: rgba(255, 255, 255, 0.65); letter-spacing: 0.06em; text-transform: uppercase;">Litoral Paulista • Brasil</span>
+    </div>
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- 2. MAIN NAVIGATION                                                        -->
+  <!-- ========================================================================= -->
+  <header class="nav-bar" id="mainNavBar">
+    <a href="#hero" class="nav-brand">
+      <img src="./Resources/logo.png" alt="Samuel Ribeiro" class="brand-logo-img" />
+      <span class="brand-name">Samuel Ribeiro</span>
+    </a>
+
+    <nav aria-label="Navegação do site">
+      <ul class="nav-links">
+        <li><a href="#sobre">O Corretor</a></li>
+        <li><a href="#colecao">Residências</a></li>
+        <li><a href="#cinema">Cinema Suite</a></li>
+        <li><a href="#materiais">Materialidade</a></li>
+        <li><a href="#mercado">Mercado</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <a href="#contato" class="nav-contact-link">
+      <span>Atendimento Privativo</span>
+    </a>
+  </header>
+
+  <main>
+    <!-- ========================================================================= -->
+    <!-- 3. CINEMATIC HERO (vid3.mp4 ambient coast video + orchestrated text)      -->
+    <!-- ========================================================================= -->
+    <section class="hero" id="hero">
+      <video autoplay muted loop playsinline poster="./Resources/24000000brl.png" class="hero-video-bg">
+        <source src="./Resources/vid3.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-scrim"></div>
+
+      <div class="wrap hero-content">
+        <div class="hero-badge">
+          <span>Riviera de São Lourenço • Litoral Paulista</span>
+        </div>
+
+        <h1 class="hero-title">
+          Arquitetura de autor e <em>discrição absoluta</em> na Riviera.
+        </h1>
+
+        <p class="hero-summary">
+          Curadoria independente e assessoria patrimonial especializada na aquisição das residências mais distintas de um dos destinos mais valorizados do Brasil.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#colecao" class="btn-hero-primary">
+            <span>Explorar Residências</span>
+            <span>&darr;</span>
+          </a>
+          <a href="https://wa.me/5513999999999?text=Ol%C3%A1%20Samuel!%20Gostaria%20de%20iniciar%20uma%20conversa%20privativa%20sobre%20im%C3%B3veis%20na%20Riviera." target="_blank" rel="noopener noreferrer" class="btn-hero-secondary">
+            <span>Consultoria via WhatsApp</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 4. ABOUT THE CURATOR (Samuel Ribeiro, ceo2.jpg & Authority)               -->
+    <!-- ========================================================================= -->
+    <section class="section-about" id="sobre">
+      <div class="wrap">
+        <div class="about-split">
+          
+          <!-- Portrait Container -->
+          <div class="curator-portrait-box">
+            <img src="./Resources/ceo2.jpg" alt="Samuel Ribeiro, Corretor de Imóveis de Alto Padrão" class="curator-portrait" />
+            <div class="curator-caption">
+              <div>
+                <div class="curator-name">Samuel Ribeiro</div>
+                <div style="font-size: 11px; color: var(--ink-faint);">Especialista em Casas na Riviera</div>
+              </div>
+              <span class="curator-tag">CRECI 213222-F</span>
+            </div>
+          </div>
+
+          <!-- Editorial Narrative -->
+          <div class="about-text-column">
+            <span class="section-eyebrow">Sobre a Atuação</span>
+            <h2 class="about-lead">
+              Conectar você às melhores casas exige viver diariamente o mercado local.
+            </h2>
+
+            <div class="about-body">
+              <p>
+                Sou Samuel Ribeiro, corretor especializado em imóveis de alto padrão e luxo na Riviera de São Lourenço. Meu trabalho é oferecer uma experiência imobiliária exclusiva, segura e personalizada, conectando você às melhores casas de um dos destinos mais valorizados e desejados do litoral paulista.
+              </p>
+              <p>
+                Com atuação 100% focada em casas na Riviera, acompanho presencialmente cada lançamento, cada lote disponível e as negociações confidenciais de famílias que não desejam expor seu patrimônio em portais convencionais. Esse conhecimento diário assegura curadoria técnica rigorosa, blindagem documental e acesso antecipado a oportunidades singulares.
+              </p>
+            </div>
+
+            <!-- Plain label:number stats with count-up animation -->
+            <div class="curator-stats-grid" id="statsGrid">
+              <div>
+                <div class="stat-entry-number count-up" data-target="353" data-prefix="" data-suffix=" mil">0 mil</div>
+                <div class="stat-entry-label">seguidores no Instagram</div>
+              </div>
+              <div>
+                <div class="stat-entry-number count-up" data-target="80" data-prefix="+" data-suffix=" mil">+0 mil</div>
+                <div class="stat-entry-label">inscritos no YouTube</div>
+              </div>
+              <div>
+                <div class="stat-entry-number count-up" data-target="2630" data-prefix="" data-suffix="+" data-thousand="true">0+</div>
+                <div class="stat-entry-label">apresentações em vídeo</div>
+              </div>
+              <div>
+                <div class="stat-entry-number count-up" data-target="100" data-prefix="" data-suffix="%">0%</div>
+                <div class="stat-entry-label">foco na Riviera de São Lourenço</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 5. RESIDÊNCIAS — THE MONOGRAPH COLLECTION                                 -->
+    <!-- ========================================================================= -->
+    <section class="section-collection" id="colecao">
+      <div class="wrap">
+        
+        <div class="collection-header-row">
+          <div>
+            <span class="section-eyebrow">Portfólio de Residências</span>
+            <h2 class="section-title">Acervo Selecionado</h2>
+          </div>
+
+          <div class="collection-actions-cluster">
+            <!-- Category Filters -->
+            <div class="filter-pills-row" id="filterPills">
+              <button class="filter-pill active" data-filter="all">Todas</button>
+              <button class="filter-pill" data-filter="superluxo">Super Luxo (+R$ 10M)</button>
+              <button class="filter-pill" data-filter="modernas">Design Contemporâneo</button>
+            </div>
+
+            <!-- Header Chevron Navigation -->
+            <div class="carousel-nav-cluster" aria-label="Navegação do carrossel">
+              <button class="carousel-nav-btn" id="carouselPrevBtn" aria-label="Residência anterior" title="Anterior">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button class="carousel-nav-btn" id="carouselNextBtn" aria-label="Próxima residência" title="Próxima">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Horizontal Gallery Wrapper with Floating Side Chevrons -->
+        <div class="gallery-track-wrapper">
+          <button class="gallery-floating-arrow prev" id="floatingPrevBtn" aria-label="Residência anterior" title="Anterior">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+          </button>
+
+          <!-- Horizontal Gallery Track -->
+          <div class="gallery-horizontal-track" id="propertiesTrack" tabindex="0" aria-label="Carrossel de residências">
+          
+          <!-- Property 1: R$ 24.000.000 -->
+          <article class="residence-card" data-category="superluxo modernas" data-price-brl="24000000">
+            <div>
+              <div class="residence-image-box" onclick="openInspectionModal(0)">
+                <img src="./Resources/24000000brl.png" alt="Mansão Cinematográfica Riviera" class="residence-image" loading="lazy" />
+                <span class="residence-badge">Módulo Nobre</span>
+              </div>
+              <div class="residence-body">
+                <div>
+                  <h3 class="residence-title">Mansão Cinematográfica</h3>
+                  <div class="residence-location">Módulo Nobre • Frente a Área Preservada</div>
+                  
+                  <div class="spec-table">
+                    <div class="spec-line">
+                      <span class="spec-line-key">Lote</span>
+                      <span class="spec-line-val">1.100 m²</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Área Construída</span>
+                      <span class="spec-line-val">850 m²</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Suítes</span>
+                      <span class="spec-line-val">6 Suítes Master</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Vagas</span>
+                      <span class="spec-line-val">6 Vagas</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="residence-footer-row">
+                  <div>
+                    <span style="font-size: 10px; color: var(--ink-faint); display: block;">Investimento</span>
+                    <span class="price-value" data-raw-brl="24000000">R$ 24.000.000</span>
+                  </div>
+                  <button class="btn-inspect" onclick="openInspectionModal(0)">Inspecionar Dossiê &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Property 2: R$ 13.500.000 (Sunset Contemporary) -->
+          <article class="residence-card" data-category="superluxo modernas" data-price-brl="13500000">
+            <div>
+              <div class="residence-image-box" onclick="openInspectionModal(1)">
+                <img src="./Resources/13500000brl.png" alt="Sunset Contemporary Villa" class="residence-image" loading="lazy" />
+                <span class="residence-badge">Pôr do Sol</span>
+              </div>
+              <div class="residence-body">
+                <div>
+                  <h3 class="residence-title">Sunset Contemporary Villa</h3>
+                  <div class="residence-location">Módulo Nobre • Palmeiras Imperiais</div>
+                  
+                  <div class="spec-table">
+                    <div class="spec-line">
+                      <span class="spec-line-key">Lote</span>
+                      <span class="spec-line-val">800 m²</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Área Construída</span>
+                      <span class="spec-line-val">620 m²</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Suítes</span>
+                      <span class="spec-line-val">5 Suítes</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Lazer</span>
+                      <span class="spec-line-val">Borda Infinita</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="residence-footer-row">
+                  <div>
+                    <span style="font-size: 10px; color: var(--ink-faint); display: block;">Investimento</span>
+                    <span class="price-value" data-raw-brl="13500000">R$ 13.500.000</span>
+                  </div>
+                  <button class="btn-inspect" onclick="openInspectionModal(1)">Inspecionar Dossiê &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Property 3: R$ 13.500.000 (Villa 39) -->
+          <article class="residence-card" data-category="superluxo modernas" data-price-brl="13500000">
+            <div>
+              <div class="residence-image-box" onclick="openInspectionModal(2)">
+                <img src="./Resources/13500000brl (2).png" alt="Villa Arquitetônica 39" class="residence-image" loading="lazy" />
+                <span class="residence-badge">Ripado & Pedra</span>
+              </div>
+              <div class="residence-body">
+                <div>
+                  <h3 class="residence-title">Villa Arquitetônica 39</h3>
+                  <div class="residence-location">Módulo Nobre • Madeira Cumaru</div>
+                  
+                  <div class="spec-table">
+                    <div class="spec-line">
+                      <span class="spec-line-key">Lote</span>
+                      <span class="spec-line-val">780 m²</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Área Construída</span>
+                      <span class="spec-line-val">580 m²</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Suítes</span>
+                      <span class="spec-line-val">5 Suítes</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Ventilação</span>
+                      <span class="spec-line-val">Cruzada Ativa</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="residence-footer-row">
+                  <div>
+                    <span style="font-size: 10px; color: var(--ink-faint); display: block;">Investimento</span>
+                    <span class="price-value" data-raw-brl="13500000">R$ 13.500.000</span>
+                  </div>
+                  <button class="btn-inspect" onclick="openInspectionModal(2)">Inspecionar Dossiê &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Property 4: R$ 7.900.000 (Palms Modern) -->
+          <article class="residence-card" data-category="modernas" data-price-brl="7900000">
+            <div>
+              <div class="residence-image-box" onclick="openInspectionModal(3)">
+                <img src="./Resources/7900000brl.png" alt="Palms Modern Estate" class="residence-image" loading="lazy" />
+                <span class="residence-badge">Riviera Central</span>
+              </div>
+              <div class="residence-body">
+                <div>
+                  <h3 class="residence-title">Palms Modern Estate</h3>
+                  <div class="residence-location">Paisagismo Tropical Esculpido</div>
+                  
+                  <div class="spec-table">
+                    <div class="spec-line">
+                      <span class="spec-line-key">Lote</span>
+                      <span class="spec-line-val">650 m²</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Área Construída</span>
+                      <span class="spec-line-val">490 m²</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Suítes</span>
+                      <span class="spec-line-val">5 Suítes</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Passarela</span>
+                      <span class="spec-line-val">Degraus Flutuantes</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="residence-footer-row">
+                  <div>
+                    <span style="font-size: 10px; color: var(--ink-faint); display: block;">Investimento</span>
+                    <span class="price-value" data-raw-brl="7900000">R$ 7.900.000</span>
+                  </div>
+                  <button class="btn-inspect" onclick="openInspectionModal(3)">Inspecionar Dossiê &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Property 5: R$ 6.500.000 (Residência Elegância) -->
+          <article class="residence-card" data-category="modernas" data-price-brl="6500000">
+            <div>
+              <div class="residence-image-box" onclick="openInspectionModal(4)">
+                <img src="./Resources/6500000brl.png" alt="Residência Elegância Riviera" class="residence-image" loading="lazy" />
+                <span class="residence-badge">Oportunidade</span>
+              </div>
+              <div class="residence-body">
+                <div>
+                  <h3 class="residence-title">Residência Elegância</h3>
+                  <div class="residence-location">Módulo Residencial de Alta Valorização</div>
+                  
+                  <div class="spec-table">
+                    <div class="spec-line">
+                      <span class="spec-line-key">Lote</span>
+                      <span class="spec-line-val">550 m²</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Área Construída</span>
+                      <span class="spec-line-val">420 m²</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Suítes</span>
+                      <span class="spec-line-val">4 Suítes</span>
+                    </div>
+                    <div class="spec-line">
+                      <span class="spec-line-key">Lazer</span>
+                      <span class="spec-line-val">Espaço Gourmet</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="residence-footer-row">
+                  <div>
+                    <span style="font-size: 10px; color: var(--ink-faint); display: block;">Investimento</span>
+                    <span class="price-value" data-raw-brl="6500000">R$ 6.500.000</span>
+                  </div>
+                  <button class="btn-inspect" onclick="openInspectionModal(4)">Inspecionar Dossiê &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+          <button class="gallery-floating-arrow next" id="floatingNextBtn" aria-label="Próxima residência" title="Próxima">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 6. RIVIERA CINEMA SUITE (ALL 3 VIDEOS INTEGRATED)                          -->
+    <!-- ========================================================================= -->
+    <section class="section-cinema" id="cinema">
+      <div class="wrap">
+        
+        <div class="cinema-layout">
+          
+          <!-- Cinema Deck Player -->
+          <div>
+            <div class="video-deck-frame">
+              <video id="cinemaPlayer" autoplay muted loop playsinline poster="./Resources/24000000brl.png" class="video-element">
+                <source src="./Resources/vid2_vlog.mp4" type="video/mp4" id="cinemaVideoSource" />
+              </video>
+
+              <!-- Custom Player Controls Bar -->
+              <div class="cinema-controls-bar">
+                <button class="cinema-ctrl-btn" id="btnPlayPauseCinema">
+                  <span id="playIconSymbol">&#10074;&#10074;</span>
+                  <span id="playTextStatus">Pausar</span>
+                </button>
+
+                <div style="font-size: 11px; color: rgba(255, 255, 255, 0.7); letter-spacing: 0.08em;" id="videoDeckBadge">
+                  02 • Tour Guiado com Samuel
+                </div>
+
+                <button class="cinema-ctrl-btn" id="btnMuteCinema">
+                  <span id="muteIconSymbol">&#128263;</span>
+                  <span id="muteTextStatus">Ativar Áudio</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Channel Selectors -->
+          <div>
+            <span class="section-eyebrow section-eyebrow-dark">Cinema Suite</span>
+            <h2 class="section-title section-title-dark">
+              A experiência antes da visita presencial.
+            </h2>
+            <p style="color: var(--ink-light-muted); font-size: 15px; margin-top: 1rem; line-height: 1.7;">
+              Alternar entre as diferentes perspectivas da Riviera através de produções audiovisuais em alta resolução com a curadoria de Samuel Ribeiro:
+            </p>
+
+            <div class="cinema-channel-tabs">
+              <!-- Channel 1: Coastal Drone -->
+              <div class="cinema-tab-item" data-video="./Resources/vid3.mp4" data-badge="01 • A Costa & Riviera">
+                <div>
+                  <div class="cinema-tab-name">01 • A Costa & O Mar</div>
+                  <div class="cinema-tab-desc">Tomadas aéreas da faixa de areia, módulos nobres e o Golfe Clube.</div>
+                </div>
+                <span class="cinema-tab-pill">Drone 4K</span>
+              </div>
+
+              <!-- Channel 2: Vlog Tour (Active by default) -->
+              <div class="cinema-tab-item active" data-video="./Resources/vid2_vlog.mp4" data-badge="02 • Tour com Samuel">
+                <div>
+                  <div class="cinema-tab-name">02 • Tour Imersivo Guiado</div>
+                  <div class="cinema-tab-desc">Caminhada detalhada com Samuel Ribeiro explicando plantas e acabamentos.</div>
+                </div>
+                <span class="cinema-tab-pill">Tour Vlog</span>
+              </div>
+
+              <!-- Channel 3: Architecture & Light -->
+              <div class="cinema-tab-item" data-video="./Resources/vid1.mp4" data-badge="03 • Arquitetura & Luz">
+                <div>
+                  <div class="cinema-tab-name">03 • Arquitetura & Entardecer</div>
+                  <div class="cinema-tab-desc">A luz dourada sobre as fachadas autorais e piscinas integradas.</div>
+                </div>
+                <span class="cinema-tab-pill">Luz Natural</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 7. ARCHITECTURAL MATERIALITY GALLERY (img1 to img5)                       -->
+    <!-- ========================================================================= -->
+    <section class="section-materials" id="materiais">
+      <div class="wrap">
+        
+        <div style="max-w: 720px;">
+          <span class="section-eyebrow">Materialidade & Acabamentos</span>
+          <h2 class="section-title">A nobreza dos elementos naturais</h2>
+          <p style="color: var(--ink-muted); font-size: 15px; margin-top: 1rem; line-height: 1.75;">
+            Na arquitetura de alto padrão da Riviera de São Lourenço, a integração de pedras atérmicas, madeiras nobres e iluminação cênica cria espaços que envelhecem com beleza e dignidade.
+          </p>
+        </div>
+
+        <div class="materials-grid">
+          <!-- Item 1: img1 -->
+          <div class="material-tile" onclick="openMaterialDetail(0)">
+            <img src="./Resources/img1.jpg" alt="Living Monumental" class="material-img" loading="lazy" />
+            <div class="material-overlay">
+              <span class="material-label">Espacialidade</span>
+              <h3 class="material-title">Living com Pé-Direito Duplo de 7 Metros</h3>
+            </div>
+          </div>
+
+          <!-- Item 2: img4 -->
+          <div class="material-tile" onclick="openMaterialDetail(1)">
+            <img src="./Resources/img4.jpg" alt="Gourmet e Tora Orgânica" class="material-img" loading="lazy" />
+            <div class="material-overlay">
+              <span class="material-label">Marcenaria Nobre</span>
+              <h3 class="material-title">Bancada Esculpida em Tora Orgânica</h3>
+            </div>
+          </div>
+
+          <!-- Item 3: img3 -->
+          <div class="material-tile" onclick="openMaterialDetail(2)">
+            <img src="./Resources/img3.jpg" alt="Pórtico Monumental" class="material-img" loading="lazy" />
+            <div class="material-overlay">
+              <span class="material-label">Portais</span>
+              <h3 class="material-title">Mármore Branco Paraná & Madeira Cumaru</h3>
+            </div>
+          </div>
+
+          <!-- Item 4: img2 -->
+          <div class="material-tile" onclick="openMaterialDetail(3)">
+            <img src="./Resources/img2.jpg" alt="Lounge Social Integrado" class="material-img" loading="lazy" />
+            <div class="material-overlay">
+              <span class="material-label">Paisagismo</span>
+              <h3 class="material-title">Integração com Jardim Tropical Nativo</h3>
+            </div>
+          </div>
+
+          <!-- Item 5: img5 -->
+          <div class="material-tile" onclick="openMaterialDetail(4)">
+            <img src="./Resources/img5.jpg" alt="Brises e Linhas Puras" class="material-img" loading="lazy" />
+            <div class="material-overlay">
+              <span class="material-label">Envoltória</span>
+              <h3 class="material-title">Brises Amadeirados & Vidro Solar Low-E</h3>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 8. MARKET & TERRITORIAL SCARCITY                                          -->
+    <!-- ========================================================================= -->
+    <section class="section-market" id="mercado">
+      <div class="wrap">
+        <div class="market-split">
+          
+          <div class="market-quote">
+            "A escassez de novos lotes e o rigor do plano diretor tornam a Riviera um refúgio <em>imune às oscilações</em> comuns de outros mercados costeiros."
+          </div>
+
+          <div class="market-text">
+            <p>
+              Enquanto muitos destinos turísticos expandem sua área sem critérios urbanísticos, a Riviera de São Lourenço opera com limites definitivos de ocupação territorial, saneamento 100% tratado e certificação ambiental ISO 14001.
+            </p>
+            <p>
+              O estoque de residências contemporâneas em módulos nobres é rigorosamente finito. Essa equação de alta procura qualificada e oferta estritamente controlada assegura solidez patrimonial inabalável e liquidez constante para os proprietários.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 9. DIGITAL PRESENCE & AUTHORITY                                           -->
+    <!-- ========================================================================= -->
+    <section class="section-digital">
+      <div class="wrap">
+        
+        <div style="margin-bottom: 2.5rem;">
+          <span class="section-eyebrow">Autoridade & Comunidade</span>
+          <h2 class="section-title">Acompanhe a Riviera em Tempo Real</h2>
+        </div>
+
+        <div>
+          <!-- YouTube Link -->
+          <a href="https://www.youtube.com/@SAMUELRIBEIROOFICIAL" target="_blank" rel="noopener noreferrer" class="digital-tile-link">
+            <div>
+              <div class="channel-title">Canal Samuel Ribeiro Riviera Inside</div>
+              <div class="channel-sub">Mais de 80.000 inscritos acompanhando análises arquitetônicas profundas, valores de mercado e tours sem cortes.</div>
+            </div>
+            <div class="tile-hover-arrow">Acessar YouTube &rarr;</div>
+          </a>
+
+          <!-- Instagram Link -->
+          <a href="https://www.instagram.com/samuel.ribeiroimoveis" target="_blank" rel="noopener noreferrer" class="digital-tile-link">
+            <div>
+              <div class="channel-title">Instagram @samuel.ribeiroimoveis</div>
+              <div class="channel-sub">353.000 seguidores e mais de 2.600 publicações com as novidades semanais e oportunidades off-market.</div>
+            </div>
+            <div class="tile-hover-arrow">Ver Perfil &rarr;</div>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================= -->
+    <!-- 10. PRIVATE CONCIERGE & MINIMAL CONTACT FORM                              -->
+    <!-- ========================================================================= -->
+    <section class="section-contact" id="contato">
+      <div class="wrap">
+        <div class="contact-grid">
+          
+          <!-- Minimal Form -->
+          <div>
+            <span class="section-eyebrow">Atendimento Sob Medida</span>
+            <h2 class="section-title">Iniciar Consulta Privativa</h2>
+            <p style="color: var(--ink-muted); font-size: 15px; margin-top: 1rem;">
+              Para receber o dossiê confidencial de qualquer imóvel ou solicitar assessoria para aquisição específica na Riviera de São Lourenço.
+            </p>
+
+            <form class="form-minimal-stack" id="leadInquiryForm" onsubmit="handleInquirySubmit(event)">
+              
+              <div class="form-minimal-group">
+                <label for="leadNome" class="field-label">Nome Completo</label>
+                <input type="text" id="leadNome" name="nome" required placeholder="Como deseja ser tratado" class="field-underline-input" />
+              </div>
+
+              <div class="form-minimal-group">
+                <label for="leadTel" class="field-label">WhatsApp / Telefone Direto</label>
+                <input type="tel" id="leadTel" name="telefone" required placeholder="(11) 99999-9999" class="field-underline-input" />
+              </div>
+
+              <div class="form-minimal-group">
+                <label for="leadFaixa" class="field-label">Faixa de Investimento Pretendida</label>
+                <select id="leadFaixa" name="faixa" class="field-underline-input">
+                  <option value="Até R$ 10.000.000">Até R$ 10.000.000</option>
+                  <option value="R$ 10.000.000 a R$ 15.000.000">R$ 10.000.000 a R$ 15.000.000</option>
+                  <option value="R$ 15.000.000 a R$ 25.000.000" selected>R$ 15.000.000 a R$ 25.000.000</option>
+                  <option value="Acima de R$ 25.000.000">Acima de R$ 25.000.000</option>
+                </select>
+              </div>
+
+              <div class="form-minimal-group">
+                <label for="leadImovel" class="field-label">Residência de Interesse</label>
+                <select id="leadImovel" name="imovel" class="field-underline-input">
+                  <option value="Geral - Quero conhecer opções na Riviera">Geral - Conhecer o acervo completo da Riviera</option>
+                  <option value="Mansão Cinematográfica (R$ 24M)">Mansão Cinematográfica (R$ 24.000.000)</option>
+                  <option value="Sunset Contemporary Villa (R$ 13.5M)">Sunset Contemporary Villa (R$ 13.500.000)</option>
+                  <option value="Villa Arquitetônica 39 (R$ 13.5M)">Villa Arquitetônica 39 (R$ 13.500.000)</option>
+                  <option value="Palms Modern Estate (R$ 7.9M)">Palms Modern Estate (R$ 7.900.000)</option>
+                  <option value="Residência Elegância Riviera (R$ 6.5M)">Residência Elegância Riviera (R$ 6.500.000)</option>
+                </select>
+              </div>
+
+              <div class="form-minimal-group">
+                <label for="leadMsg" class="field-label">Critérios Específicos (Opcional)</label>
+                <input type="text" id="leadMsg" name="mensagem" placeholder="Ex: módulo de preferência, quantidade de suítes, casa térrea..." class="field-underline-input" />
+              </div>
+
+              <button type="submit" class="btn-submit-inquiry">
+                <span>Solicitar Dossiê Confidencial</span>
+                <span>&rarr;</span>
+              </button>
+
+              <div id="formFeedback" style="display: none; font-size: 13px; color: var(--sage); margin-top: 1rem;">
+                Informações registradas com sigilo. Abrindo o canal privativo no WhatsApp...
+              </div>
+
+            </form>
+          </div>
+
+          <!-- Direct Channels Table -->
+          <div>
+            <span class="section-eyebrow">Canais Diretos</span>
+            <h3 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 300;">Assessoria Imediata</h3>
+            <p style="color: var(--ink-muted); font-size: 14px; margin-top: 0.5rem; line-height: 1.6;">
+              Disponibilidade pessoal para agendamento de visitas privativas e assessoria documental técnica.
+            </p>
+
+            <div class="contact-channels-table">
+              <div class="channel-line">
+                <span class="channel-line-key">WhatsApp Direto</span>
+                <a href="https://wa.me/5513999999999?text=Ol%C3%A1%20Samuel!%20Acessei%20seu%20site%20e%20gostaria%20de%20um%20atendimento%20privativo." target="_blank" rel="noopener noreferrer" class="channel-line-val">
+                  +55 (13) 99999-9999
+                </a>
+              </div>
+
+              <div class="channel-line">
+                <span class="channel-line-key">Instagram Oficial</span>
+                <a href="https://www.instagram.com/samuel.ribeiroimoveis" target="_blank" rel="noopener noreferrer" class="channel-line-val">
+                  @samuel.ribeiroimoveis
+                </a>
+              </div>
+
+              <div class="channel-line">
+                <span class="channel-line-key">Canal no YouTube</span>
+                <a href="https://www.youtube.com/@SAMUELRIBEIROOFICIAL" target="_blank" rel="noopener noreferrer" class="channel-line-val">
+                  Samuel Ribeiro Riviera Inside
+                </a>
+              </div>
+
+              <div class="channel-line">
+                <span class="channel-line-key">Base Operacional</span>
+                <span class="channel-line-val" style="font-weight: 400;">
+                  Riviera de São Lourenço — Bertioga, SP
+                </span>
+              </div>
+
+              <div class="channel-line">
+                <span class="channel-line-key">Registro Profissional</span>
+                <span class="channel-line-val" style="font-weight: 400;">
+                  CRECI 213222-F
+                </span>
+              </div>
+            </div>
+
+            <div style="margin-top: 2.5rem; padding: 1.75rem; background: #FFFFFF; border: 1px solid var(--hairline);">
+              <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 0.35rem;">
+                Compromisso de Sigilo
+              </div>
+              <p style="font-size: 13px; color: var(--ink-muted); line-height: 1.6;">
+                Nenhum dado é compartilhado com terceiros. Todas as comunicações são tratadas sob rigoroso acordo de confidencialidade pessoal de Samuel Ribeiro.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================= -->
+  <!-- 11. FOOTER                                                                -->
+  <!-- ========================================================================= -->
+  <footer class="site-footer">
+    <div class="wrap">
+      
+      <div class="footer-top-row">
+        <div>
+          <div class="footer-brand-title">Samuel Ribeiro</div>
+          <div style="font-size: 11px; color: var(--ink-faint); margin-top: 0.25rem;">
+            Especialista em Casas de Alto Padrão • CRECI 213222-F
+          </div>
+        </div>
+
+        <ul class="footer-links-list">
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#sobre">O Corretor</a></li>
+          <li><a href="#colecao">Residências</a></li>
+          <li><a href="#cinema">Cinema Suite</a></li>
+          <li><a href="#materiais">Materialidade</a></li>
+          <li><a href="#mercado">Mercado</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom-row">
+        <div>
+          &copy; <span id="footerYear"></span> Samuel Ribeiro. Riviera de São Lourenço, Bertioga — SP.
+        </div>
+        <div>
+          Curadoria independente e consultoria patrimonial de alto luxo.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================================================= -->
+  <!-- 12. UNDERSTATED EDGE WHATSAPP TAB                                         -->
+  <!-- ========================================================================= -->
+  <a 
+    href="https://wa.me/5513999999999?text=Ol%C3%A1%20Samuel!%20Acessei%20seu%20site%20e%20gostaria%20de%20um%20atendimento%20privativo." 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    class="edge-tab-anchor"
+    aria-label="Atendimento Privativo no WhatsApp">
+    <span style="width: 5px; height: 5px; border-radius: 50%; background: var(--sage); display: inline-block;"></span>
+    <span>WhatsApp Privativo</span>
+  </a>
+
+  <!-- ========================================================================= -->
+  <!-- 13. ARCHITECTURAL INSPECTION MODAL (DOSSIÊ PRIVATIVO)                     -->
+  <!-- ========================================================================= -->
+  <div class="inspection-modal-backdrop" id="inspectionModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="inspection-modal-sheet">
+      <button class="modal-close-btn" onclick="closeInspectionModal()" aria-label="Fechar Dossiê">&times;</button>
+
+      <div class="modal-photo-container">
+        <img id="modalImgTarget" src="./Resources/24000000brl.png" alt="Residência" class="modal-photo" />
+      </div>
+
+      <div class="modal-content-body">
+        <span id="modalBadgeLocation" class="section-eyebrow">Módulo Nobre</span>
+        <h2 id="modalTitleTarget" class="section-title" style="font-size: clamp(2rem, 3.2vw, 2.75rem); margin-bottom: 0.5rem;">
+          Mansão Cinematográfica
+        </h2>
+
+        <div style="font-size: 1.6rem; font-family: var(--font-serif); color: var(--accent); margin-bottom: 1.5rem;" id="modalPriceTarget">
+          R$ 24.000.000
+        </div>
+
+        <p id="modalDescTarget" style="color: var(--ink-muted); font-size: 15px; line-height: 1.7; margin-bottom: 2rem;">
+          Descrição detalhada...
+        </p>
+
+        <div class="spec-table" id="modalSpecGridTarget">
+          <!-- Dynamic specs injected via JS -->
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--hairline);">
+          <div style="font-size: 12px; color: var(--ink-faint);">
+            Atendimento conduzido por <strong>Samuel Ribeiro</strong> (CRECI 213222-F).
+          </div>
+          <a id="modalWhatsAppAction" href="#" target="_blank" rel="noopener noreferrer" class="btn-submit-inquiry" style="margin-top: 0;">
+            <span>Agendar Visita & Solicitar Dossiê</span>
+            <span>&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- 14. INLINE JAVASCRIPT MASTER SUITE                                        -->
+  <!-- ========================================================================= -->
+  <script>
+    // --------------------------------------------------------------------------
+    // 1. Data Store for All 5 Residences with Official Prices
+    // --------------------------------------------------------------------------
+    const RESIDENCES_DATA = [
+      {
+        title: "Mansão Cinematográfica",
+        location: "Módulo Nobre • Frente a Área Preservada",
+        priceBrl: 24000000,
+        priceFormattedBrl: "R$ 24.000.000",
+        image: "./Resources/24000000brl.png",
+        lote: "1.100 m²",
+        construcao: "850 m²",
+        suites: "6 Suítes Master",
+        vagas: "6 Vagas",
+        modulo: "Módulo Nobre",
+        orientacao: "Face Norte Privilegiada (Sol o dia todo)",
+        desc: "Projeto arquitetônico monumental com pé-direito imponente e integração biofílica. Fachada iluminada em pedra nobre e vidro, piscina com prainha aquecida e espaço gourmet de padrão internacional."
+      },
+      {
+        title: "Sunset Contemporary Villa",
+        location: "Módulo Residencial Nobre • Palmeiras Imperiais",
+        priceBrl: 13500000,
+        priceFormattedBrl: "R$ 13.500.000",
+        image: "./Resources/13500000brl.png",
+        lote: "800 m²",
+        construcao: "620 m²",
+        suites: "5 Suítes",
+        vagas: "4 Vagas",
+        modulo: "Módulo Nobre",
+        orientacao: "Poente com Pôr do Sol Privilegiado",
+        desc: "Volumetria pura emoldurada por palmeiras imperiais, vidros reflexivos que captam a luz dourada do entardecer e lazer completo com piscina de borda infinita."
+      },
+      {
+        title: "Villa Arquitetônica 39",
+        location: "Módulo Residencial • Madeira Cumaru e Concreto",
+        priceBrl: 13500000,
+        priceFormattedBrl: "R$ 13.500.000",
+        image: "./Resources/13500000brl (2).png",
+        lote: "780 m²",
+        construcao: "580 m²",
+        suites: "5 Suítes",
+        vagas: "4 Vagas",
+        modulo: "Módulo Nobre",
+        orientacao: "Ventilação Cruzada Contínua",
+        desc: "Design geométrico marcante com revestimento em réguas de madeira nobre e pedra esculpida. Projeto focado na privacidade da família e na ventilação natural constante."
+      },
+      {
+        title: "Palms Modern Estate",
+        location: "Riviera Central • Paisagismo Tropical Esculpido",
+        priceBrl: 7900000,
+        priceFormattedBrl: "R$ 7.900.000",
+        image: "./Resources/7900000brl.png",
+        lote: "650 m²",
+        construcao: "490 m²",
+        suites: "5 Suítes",
+        vagas: "4 Vagas",
+        modulo: "Módulo Central",
+        orientacao: "Manhã & Tarde Balanceada",
+        desc: "Residência acolhedora com palmeira monumental na fachada, passarela em degraus flutuantes sobre espelho d'água e volumetria elegante em concreto aparente."
+      },
+      {
+        title: "Residência Elegância",
+        location: "Módulo Residencial de Alta Valorização",
+        priceBrl: 6500000,
+        priceFormattedBrl: "R$ 6.500.000",
+        image: "./Resources/6500000brl.png",
+        lote: "550 m²",
+        construcao: "420 m²",
+        suites: "4 Suítes",
+        vagas: "4 Vagas",
+        modulo: "Módulo Nobre",
+        orientacao: "Excelente Insolação de Verão",
+        desc: "Excelente combinação de custo-benefício e requinte na Riviera. Casa contemporânea com fachada iluminada, paisagismo denso e ampla área de lazer familiar com documentação 100% pronta."
+      }
+    ];
+
+    // --------------------------------------------------------------------------
+    // 2. Current Year in Footer
+    // --------------------------------------------------------------------------
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+
+    // --------------------------------------------------------------------------
+    // 3. Live Riviera de São Lourenço Clock Widget
+    // --------------------------------------------------------------------------
+    function updateRivieraClock() {
+      const now = new Date();
+      // Brasilia standard time (UTC-3)
+      const options = { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+      const timeString = new Intl.DateTimeFormat('pt-BR', options).format(now);
+      const clockEl = document.getElementById('liveClockText');
+      if (clockEl) {
+        clockEl.textContent = `Riviera de São Lourenço • ${timeString} (GMT-3)`;
+      }
+    }
+    updateRivieraClock();
+    setInterval(updateRivieraClock, 1000);
+
+    // --------------------------------------------------------------------------
+    // 4. Sticky Header Behavior
+    // --------------------------------------------------------------------------
+    const mainNavBar = document.getElementById('mainNavBar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 45) {
+        mainNavBar.classList.add('scrolled');
+      } else {
+        mainNavBar.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // --------------------------------------------------------------------------
+    // 5. Price Formatting Helper (BRL)
+    // --------------------------------------------------------------------------
+    function formatPrice(valueBrl) {
+      if (!valueBrl || valueBrl === 0) return "Sob Consulta";
+      return "R$ " + valueBrl.toLocaleString('pt-BR');
+    }
+
+    // --------------------------------------------------------------------------
+    // 6. Cinema Suite: Interactive 3-Video Switcher & Custom Controls
+    // --------------------------------------------------------------------------
+    const cinemaPlayer = document.getElementById('cinemaPlayer');
+    const cinemaVideoSource = document.getElementById('cinemaVideoSource');
+    const videoDeckBadge = document.getElementById('videoDeckBadge');
+    const btnPlayPauseCinema = document.getElementById('btnPlayPauseCinema');
+    const playIconSymbol = document.getElementById('playIconSymbol');
+    const playTextStatus = document.getElementById('playTextStatus');
+    const btnMuteCinema = document.getElementById('btnMuteCinema');
+    const muteIconSymbol = document.getElementById('muteIconSymbol');
+    const muteTextStatus = document.getElementById('muteTextStatus');
+    const cinemaTabItems = document.querySelectorAll('.cinema-tab-item');
+
+    cinemaTabItems.forEach(tab => {
+      tab.addEventListener('click', () => {
+        cinemaTabItems.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const videoSrc = tab.getAttribute('data-video');
+        const badgeText = tab.getAttribute('data-badge');
+
+        if (cinemaPlayer && videoSrc) {
+          cinemaPlayer.src = videoSrc;
+          cinemaPlayer.play();
+          videoDeckBadge.textContent = badgeText;
+          playIconSymbol.innerHTML = '&#10074;&#10074;';
+          playTextStatus.textContent = 'Pausar';
+        }
+      });
+    });
+
+    if (btnPlayPauseCinema && cinemaPlayer) {
+      btnPlayPauseCinema.addEventListener('click', () => {
+        if (cinemaPlayer.paused) {
+          cinemaPlayer.play();
+          playIconSymbol.innerHTML = '&#10074;&#10074;';
+          playTextStatus.textContent = 'Pausar';
+        } else {
+          cinemaPlayer.pause();
+          playIconSymbol.innerHTML = '&#9658;';
+          playTextStatus.textContent = 'Reproduzir';
+        }
+      });
+    }
+
+    if (btnMuteCinema && cinemaPlayer) {
+      btnMuteCinema.addEventListener('click', () => {
+        cinemaPlayer.muted = !cinemaPlayer.muted;
+        if (cinemaPlayer.muted) {
+          muteIconSymbol.innerHTML = '&#128263;';
+          muteTextStatus.textContent = 'Ativar Áudio';
+        } else {
+          muteIconSymbol.innerHTML = '&#128266;';
+          muteTextStatus.textContent = 'Silenciar';
+        }
+      });
+    }
+
+    // --------------------------------------------------------------------------
+    // 8. Collection Category Filter & Carousel Chevron Navigation
+    // --------------------------------------------------------------------------
+    const filterPills = document.querySelectorAll('.filter-pill');
+    const residenceCards = document.querySelectorAll('.residence-card');
+    const propertiesTrack = document.getElementById('propertiesTrack');
+    const carouselPrevBtn = document.getElementById('carouselPrevBtn');
+    const carouselNextBtn = document.getElementById('carouselNextBtn');
+    const floatingPrevBtn = document.getElementById('floatingPrevBtn');
+    const floatingNextBtn = document.getElementById('floatingNextBtn');
+
+    function updateCarouselNavButtons() {
+      if (!propertiesTrack) return;
+      const scrollLeft = propertiesTrack.scrollLeft;
+      const maxScroll = propertiesTrack.scrollWidth - propertiesTrack.clientWidth;
+
+      const isAtStart = scrollLeft <= 8;
+      const isAtEnd = scrollLeft >= maxScroll - 8 || maxScroll <= 0;
+
+      // Update Header Chevrons
+      if (carouselPrevBtn) {
+        carouselPrevBtn.disabled = isAtStart;
+        carouselPrevBtn.classList.toggle('disabled', isAtStart);
+      }
+      if (carouselNextBtn) {
+        carouselNextBtn.disabled = isAtEnd;
+        carouselNextBtn.classList.toggle('disabled', isAtEnd);
+      }
+
+      // Update Floating Side Chevrons
+      if (floatingPrevBtn) {
+        floatingPrevBtn.disabled = isAtStart;
+        floatingPrevBtn.classList.toggle('disabled', isAtStart);
+      }
+      if (floatingNextBtn) {
+        floatingNextBtn.disabled = isAtEnd;
+        floatingNextBtn.classList.toggle('disabled', isAtEnd);
+      }
+    }
+
+    function scrollCarousel(direction) {
+      if (!propertiesTrack) return;
+      const visibleCards = propertiesTrack.querySelectorAll('.residence-card:not([style*="display: none"])');
+      if (!visibleCards.length) return;
+
+      const cardRect = visibleCards[0].getBoundingClientRect();
+      const gap = 36; // 2.25rem = 36px
+      const scrollDistance = cardRect.width + gap;
+
+      if (direction === 'prev') {
+        propertiesTrack.scrollBy({ left: -scrollDistance, behavior: 'smooth' });
+      } else {
+        propertiesTrack.scrollBy({ left: scrollDistance, behavior: 'smooth' });
+      }
+    }
+
+    if (carouselPrevBtn) carouselPrevBtn.addEventListener('click', () => scrollCarousel('prev'));
+    if (carouselNextBtn) carouselNextBtn.addEventListener('click', () => scrollCarousel('next'));
+    if (floatingPrevBtn) floatingPrevBtn.addEventListener('click', () => scrollCarousel('prev'));
+    if (floatingNextBtn) floatingNextBtn.addEventListener('click', () => scrollCarousel('next'));
+
+    if (propertiesTrack) {
+      propertiesTrack.addEventListener('scroll', () => {
+        requestAnimationFrame(updateCarouselNavButtons);
+      }, { passive: true });
+
+      propertiesTrack.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+          e.preventDefault();
+          scrollCarousel('prev');
+        } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          scrollCarousel('next');
+        }
+      });
+    }
+
+    window.addEventListener('resize', updateCarouselNavButtons, { passive: true });
+    setTimeout(updateCarouselNavButtons, 200);
+
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+
+        const filter = pill.getAttribute('data-filter');
+        residenceCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || (category && category.includes(filter))) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        if (propertiesTrack) {
+          propertiesTrack.scrollLeft = 0;
+          setTimeout(updateCarouselNavButtons, 80);
+        }
+      });
+    });
+
+    // --------------------------------------------------------------------------
+    // 9. Inspection Modal (Dossiê Arquitetônico)
+    // --------------------------------------------------------------------------
+    let currentOpenModalIndex = null;
+    const inspectionModal = document.getElementById('inspectionModal');
+    const modalImgTarget = document.getElementById('modalImgTarget');
+    const modalBadgeLocation = document.getElementById('modalBadgeLocation');
+    const modalTitleTarget = document.getElementById('modalTitleTarget');
+    const modalPriceTarget = document.getElementById('modalPriceTarget');
+    const modalDescTarget = document.getElementById('modalDescTarget');
+    const modalSpecGridTarget = document.getElementById('modalSpecGridTarget');
+    const modalWhatsAppAction = document.getElementById('modalWhatsAppAction');
+
+    function openInspectionModal(index) {
+      const data = RESIDENCES_DATA[index];
+      if (!data) return;
+
+      currentOpenModalIndex = index;
+      modalImgTarget.src = data.image;
+      modalBadgeLocation.textContent = data.location;
+      modalTitleTarget.textContent = data.title;
+      modalPriceTarget.textContent = formatPrice(data.priceBrl);
+      modalDescTarget.textContent = data.desc;
+
+      modalSpecGridTarget.innerHTML = `
+        <div class="spec-line"><span class="spec-line-key">Módulo</span><span class="spec-line-val">${data.modulo}</span></div>
+        <div class="spec-line"><span class="spec-line-key">Área do Lote</span><span class="spec-line-val">${data.lote}</span></div>
+        <div class="spec-line"><span class="spec-line-key">Área Construída</span><span class="spec-line-val">${data.construcao}</span></div>
+        <div class="spec-line"><span class="spec-line-key">Acomodações</span><span class="spec-line-val">${data.suites}</span></div>
+        <div class="spec-line"><span class="spec-line-key">Vagas de Garagem</span><span class="spec-line-val">${data.vagas}</span></div>
+        <div class="spec-line"><span class="spec-line-key">Orientação Solar</span><span class="spec-line-val">${data.orientacao}</span></div>
+      `;
+
+      const msg = encodeURIComponent(`Olá Samuel! Gostaria de receber o dossiê completo e agendar visita para: ${data.title} (${formatPrice(data.priceBrl)}).`);
+      modalWhatsAppAction.href = `https://wa.me/5513999999999?text=${msg}`;
+
+      inspectionModal.classList.add('open');
+      inspectionModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeInspectionModal() {
+      inspectionModal.classList.remove('open');
+      inspectionModal.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+      currentOpenModalIndex = null;
+    }
+
+    inspectionModal.addEventListener('click', (e) => {
+      if (e.target === inspectionModal) {
+        closeInspectionModal();
+      }
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && inspectionModal.classList.contains('open')) {
+        closeInspectionModal();
+      }
+    });
+
+    // --------------------------------------------------------------------------
+    // 10. Materiality Quick Inspection Click
+    // --------------------------------------------------------------------------
+    const MATERIAL_DATA = [
+      {
+        title: "Living Monumental com Pé-Direito Duplo",
+        desc: "Pé-direito de 7 metros com iluminação cênica integrada e esquadrias de alta resistência térmica que conectam a área interna ao verde tropical.",
+        image: "./Resources/img1.jpg",
+        modulo: "Arquitetura de Interiores"
+      },
+      {
+        title: "Bancada Esculpida em Tora Orgânica",
+        desc: "Espaço gourmet de padrão internacional com bancada artesanal esculpida em tora orgânica de madeira nobre certificada e chopeira naja embutida.",
+        image: "./Resources/img4.jpg",
+        modulo: "Área Gourmet"
+      },
+      {
+        title: "Mármore Branco Paraná & Cumaru",
+        desc: "Pórtico de entrada monumental com revestimento em mármore natural escovado e porta pivotante de grandes dimensões em madeira cumaru tratada.",
+        image: "./Resources/img3.jpg",
+        modulo: "Fachada & Entrada"
+      },
+      {
+        title: "Paisagismo Tropical & Espelho d'Água",
+        desc: "Lounge social com jardim tropical nativo da Mata Atlântica, deck em madeira nobre e piscina com prainha aquecida.",
+        image: "./Resources/img2.jpg",
+        modulo: "Lounge Social"
+      },
+      {
+        title: "Brises Móveis & Vidro Solar Low-E",
+        desc: "Linhas contemporâneas puras com brises verticais que garantem ventilação cruzada constante e privacidade aos dormitórios.",
+        image: "./Resources/img5.jpg",
+        modulo: "Envoltória Arquitetônica"
+      }
+    ];
+
+    function openMaterialDetail(index) {
+      const mat = MATERIAL_DATA[index];
+      if (!mat) return;
+
+      modalImgTarget.src = mat.image;
+      modalBadgeLocation.textContent = mat.modulo;
+      modalTitleTarget.textContent = mat.title;
+      modalPriceTarget.textContent = "Acabamento Nobre de Autor";
+      modalDescTarget.textContent = mat.desc;
+
+      modalSpecGridTarget.innerHTML = `
+        <div class="spec-line"><span class="spec-line-key">Elemento</span><span class="spec-line-val">${mat.title}</span></div>
+        <div class="spec-line"><span class="spec-line-key">Aplicação</span><span class="spec-line-val">${mat.modulo}</span></div>
+        <div class="spec-line"><span class="spec-line-key">Padrão Construtivo</span><span class="spec-line-val">Alto Padrão Riviera</span></div>
+      `;
+
+      const msg = encodeURIComponent(`Olá Samuel! Gostaria de saber mais sobre as residências com o acabamento: ${mat.title}.`);
+      modalWhatsAppAction.href = `https://wa.me/5513999999999?text=${msg}`;
+
+      inspectionModal.classList.add('open');
+      inspectionModal.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    // --------------------------------------------------------------------------
+    // 11. Brazilian Phone Mask & Lead Form
+    // --------------------------------------------------------------------------
+    const leadTel = document.getElementById('leadTel');
+    if (leadTel) {
+      leadTel.addEventListener('input', (e) => {
+        let v = e.target.value.replace(/\D/g, '');
+        if (v.length > 11) v = v.slice(0, 11);
+        if (v.length > 6) {
+          e.target.value = `(${v.slice(0, 2)}) ${v.slice(2, 7)}-${v.slice(7)}`;
+        } else if (v.length > 2) {
+          e.target.value = `(${v.slice(0, 2)}) ${v.slice(2)}`;
+        } else if (v.length > 0) {
+          e.target.value = `(${v}`;
+        }
+      });
+    }
+
+    function handleInquirySubmit(e) {
+      e.preventDefault();
+      const nome = document.getElementById('leadNome').value.trim();
+      const tel = document.getElementById('leadTel').value.trim();
+      const faixa = document.getElementById('leadFaixa').value;
+      const imovel = document.getElementById('leadImovel').value;
+      const msg = document.getElementById('leadMsg').value.trim();
+
+      const feedback = document.getElementById('formFeedback');
+      feedback.style.display = 'block';
+
+      const fullMsg = `Olá Samuel! Meu nome é ${nome}.\nTenho interesse em residências na Riviera de São Lourenço.\n\n• Telefone: ${tel}\n• Faixa de Investimento: ${faixa}\n• Residência: ${imovel}\n• Observações: ${msg || 'Gostaria de receber orientações e opções disponíveis.'}`;
+
+      const waUrl = `https://wa.me/5513999999999?text=${encodeURIComponent(fullMsg)}`;
+
+      setTimeout(() => {
+        window.open(waUrl, '_blank');
+      }, 700);
+    }
+
+    // --------------------------------------------------------------------------
+    // 12. Smooth Architectural Count-Up Animation for Statistics (Triggers Every Time)
+    // --------------------------------------------------------------------------
+    (function initCountUp() {
+      const statsContainer = document.getElementById('statsGrid');
+      const countElements = document.querySelectorAll('.count-up');
+      if (!statsContainer || !countElements.length) return;
+
+      let isCurrentlyAnimating = false;
+      let isInView = false;
+      let activeFrameIds = [];
+
+      function resetNumbers() {
+        activeFrameIds.forEach(id => cancelAnimationFrame(id));
+        activeFrameIds = [];
+        isCurrentlyAnimating = false;
+
+        countElements.forEach(el => {
+          const prefix = el.getAttribute('data-prefix') || '';
+          const suffix = el.getAttribute('data-suffix') || '';
+          el.textContent = `${prefix}0${suffix}`;
+        });
+      }
+
+      function runCountAnimation() {
+        activeFrameIds.forEach(id => cancelAnimationFrame(id));
+        activeFrameIds = [];
+        isCurrentlyAnimating = true;
+
+        const duration = 1800; // 1.8s smooth luxury duration
+
+        countElements.forEach((el, index) => {
+          const target = parseInt(el.getAttribute('data-target'), 10);
+          const prefix = el.getAttribute('data-prefix') || '';
+          const suffix = el.getAttribute('data-suffix') || '';
+          const isThousand = el.getAttribute('data-thousand') === 'true';
+
+          let startTime = null;
+
+          function step(timestamp) {
+            if (!startTime) startTime = timestamp;
+            const elapsed = timestamp - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+
+            // Ease-out cubic: fast start with smooth deceleration into final number
+            const ease = 1 - Math.pow(1 - progress, 3);
+            const current = Math.round(ease * target);
+
+            const displayNum = isThousand ? current.toLocaleString('pt-BR') : current;
+            el.textContent = `${prefix}${displayNum}${suffix}`;
+
+            if (progress < 1) {
+              const frameId = requestAnimationFrame(step);
+              activeFrameIds[index] = frameId;
+            } else {
+              const finalNum = isThousand ? target.toLocaleString('pt-BR') : target;
+              el.textContent = `${prefix}${finalNum}${suffix}`;
+              if (index === countElements.length - 1) {
+                isCurrentlyAnimating = false;
+              }
+            }
+          }
+
+          const frameId = requestAnimationFrame(step);
+          activeFrameIds[index] = frameId;
+        });
+      }
+
+      // Initial reset to zero state
+      resetNumbers();
+
+      // 1. Intersection Observer Trigger (Observes every entry and exit with zero race conditions)
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              if (!isInView) {
+                isInView = true;
+                runCountAnimation();
+              }
+            } else {
+              if (isInView) {
+                isInView = false;
+                resetNumbers();
+              }
+            }
+          });
+        }, { threshold: 0.15 });
+        observer.observe(statsContainer);
+      } else {
+        // 2. Direct Window Scroll & Resize Listeners (Reliable Fallback only for legacy browsers)
+        function checkVisibilityFallback() {
+          const rect = statsContainer.getBoundingClientRect();
+          const vh = window.innerHeight || document.documentElement.clientHeight;
+          const visible = rect.top < vh * 0.88 && rect.bottom > vh * 0.12;
+
+          if (visible) {
+            if (!isInView) {
+              isInView = true;
+              runCountAnimation();
+            }
+          } else {
+            if (isInView) {
+              isInView = false;
+              resetNumbers();
+            }
+          }
+        }
+
+        window.addEventListener('scroll', checkVisibilityFallback, { passive: true });
+        window.addEventListener('resize', checkVisibilityFallback, { passive: true });
+        setTimeout(checkVisibilityFallback, 200);
+      }
+
+      // 3. Interactive Hover / Click Replay
+      statsContainer.style.cursor = 'pointer';
+      statsContainer.title = 'Clique para ver a contagem novamente';
+      statsContainer.addEventListener('click', () => {
+        resetNumbers();
+        setTimeout(runCountAnimation, 40);
+      });
+      statsContainer.addEventListener('mouseenter', () => {
+        if (!isCurrentlyAnimating) {
+          resetNumbers();
+          runCountAnimation();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
