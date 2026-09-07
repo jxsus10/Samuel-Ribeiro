@@ -45,6 +45,7 @@
 
       --gutter: clamp(1.5rem, 5vw, 4.75rem);
       --max-w: 1400px;
+      --top-bar-h: 34px;
     }
 
     *, *::before, *::after {
@@ -159,31 +160,43 @@
       top: 0;
       left: 0;
       width: 100%;
+      height: var(--top-bar-h);
       z-index: 60;
-      background-color: rgba(16, 18, 20, 0.96);
+      background-color: rgba(16, 18, 20, 0.98);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       color: rgba(255, 255, 255, 0.85);
       font-size: 11px;
       letter-spacing: 0.06em;
-      padding: 0.45rem var(--gutter);
+      padding: 0 var(--gutter);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      transition: transform 0.3s ease;
+      white-space: nowrap;
+      overflow: hidden;
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.35s ease;
+    }
+
+    .top-utility-bar.scrolled-out {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
     }
 
     .top-utility-left {
       display: flex;
       align-items: center;
-      gap: 1.5rem;
+      gap: 1.25rem;
+      min-width: 0;
+      white-space: nowrap;
     }
 
     .live-status-badge {
       display: inline-flex;
       align-items: center;
       gap: 0.45rem;
+      white-space: nowrap;
     }
 
     .live-dot {
@@ -193,6 +206,7 @@
       background-color: var(--sage);
       box-shadow: 0 0 6px var(--sage);
       animation: pulseDot 2.5s infinite;
+      flex-shrink: 0;
     }
 
     @keyframes pulseDot {
@@ -204,20 +218,29 @@
       display: flex;
       align-items: center;
       gap: 1.25rem;
+      white-space: nowrap;
+    }
+
+    .top-utility-extra {
+      display: inline;
     }
 
     /* Main Navigation Bar */
     .nav-bar {
       position: fixed;
-      top: 32px;
+      top: var(--top-bar-h);
       left: 0;
       width: 100%;
       z-index: 50;
-      padding: 1.25rem var(--gutter);
+      padding: 1.15rem var(--gutter);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      transition: background-color 0.4s ease, top 0.4s ease, padding 0.4s ease, border-color 0.4s ease;
+      transition: background-color 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  top 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  padding 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                  border-color 0.35s ease,
+                  box-shadow 0.35s ease;
     }
 
     .nav-bar.scrolled {
@@ -225,24 +248,29 @@
       background-color: rgba(247, 245, 240, 0.96);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      padding: 1rem var(--gutter);
+      padding: 0.85rem var(--gutter);
       border-bottom: 1px solid var(--hairline);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     .nav-brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 0.85rem;
+      gap: 0.75rem;
       text-decoration: none;
       color: inherit;
+      flex-shrink: 0;
+      min-width: 0;
     }
 
     .brand-logo-img {
       height: 32px;
       width: auto;
-      object-contain: fit;
+      object-fit: contain;
       filter: invert(1) brightness(0.1);
-      transition: filter 0.3s ease;
+      transition: filter 0.3s ease, height 0.3s ease;
+      display: block;
+      flex-shrink: 0;
     }
 
     .nav-bar:not(.scrolled) .brand-logo-img {
@@ -253,13 +281,16 @@
       font-family: var(--font-serif);
       font-size: 1.25rem;
       font-weight: 400;
-      line-height: 1.1;
+      line-height: 1;
       letter-spacing: -0.015em;
+      white-space: nowrap;
+      display: inline-block;
+      transition: color 0.3s ease, font-size 0.3s ease;
     }
 
     .nav-bar:not(.scrolled) .brand-name {
       color: #FFFFFF;
-      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+      text-shadow: 0 1px 8px rgba(0,0,0,0.6);
     }
 
     .nav-links {
@@ -298,19 +329,26 @@
     .nav-contact-link {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
+      justify-content: center;
+      gap: 0.45rem;
       font-size: 11px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       text-decoration: none;
-      padding: 0.6rem 1.25rem;
+      padding: 0.55rem 1.2rem;
       border: 1px solid currentColor;
       transition: all 0.3s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+      line-height: 1;
     }
 
     .nav-bar:not(.scrolled) .nav-contact-link {
       color: #FFFFFF;
-      border-color: rgba(255, 255, 255, 0.4);
+      border-color: rgba(255, 255, 255, 0.45);
+      background-color: rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
     }
 
     .nav-bar:not(.scrolled) .nav-contact-link:hover {
@@ -322,11 +360,116 @@
     .nav-bar.scrolled .nav-contact-link {
       color: var(--ink);
       border-color: var(--hairline);
+      background-color: transparent;
     }
 
     .nav-bar.scrolled .nav-contact-link:hover {
       border-color: var(--accent);
       color: var(--accent);
+    }
+
+    .nav-btn-text-short {
+      display: none;
+    }
+
+    /* Precision Mobile Media Queries */
+    @media (max-width: 768px) {
+      :root {
+        --top-bar-h: 28px;
+        --gutter: 1.15rem;
+      }
+
+      .top-utility-bar {
+        padding: 0 1rem;
+        font-size: 10px;
+        justify-content: center;
+      }
+
+      .top-utility-left {
+        gap: 0.5rem;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .top-utility-right {
+        display: none !important;
+      }
+
+      .top-utility-extra {
+        display: none !important;
+      }
+
+      .live-status-badge {
+        font-size: 10px;
+        letter-spacing: 0.04em;
+      }
+
+      .nav-bar {
+        top: var(--top-bar-h);
+        padding: 0.75rem 1rem;
+      }
+
+      .nav-bar.scrolled {
+        top: 0;
+        padding: 0.65rem 1rem;
+      }
+
+      .nav-brand {
+        gap: 0.55rem;
+      }
+
+      .brand-logo-img {
+        height: 25px;
+      }
+
+      .brand-name {
+        font-size: 1.05rem;
+        letter-spacing: -0.01em;
+      }
+
+      .nav-contact-link {
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        padding: 0.45rem 0.85rem;
+      }
+
+      .hero {
+        padding-top: 110px;
+      }
+    }
+
+    @media (max-width: 414px) {
+      .nav-bar {
+        padding: 0.65rem 0.85rem;
+      }
+
+      .nav-brand {
+        gap: 0.45rem;
+      }
+
+      .brand-logo-img {
+        height: 23px;
+      }
+
+      .brand-name {
+        font-size: 0.98rem;
+      }
+
+      .nav-contact-link {
+        font-size: 9.5px;
+        letter-spacing: 0.06em;
+        padding: 0.42rem 0.75rem;
+      }
+    }
+
+    @media (max-width: 355px) {
+      .nav-btn-text-full {
+        display: none;
+      }
+
+      .nav-btn-text-short {
+        display: inline;
+      }
     }
 
     /* ==========================================================================
@@ -336,6 +479,7 @@
     .hero {
       position: relative;
       min-height: 100vh;
+      min-height: 100svh;
       display: flex;
       align-items: flex-end;
       padding-top: 140px;
@@ -1522,14 +1666,14 @@
   <!-- ========================================================================= -->
   <!-- 1. TOP UTILITY BAR (Live Riviera Clock & Local Info)                      -->
   <!-- ========================================================================= -->
-  <aside class="top-utility-bar">
+  <aside class="top-utility-bar" id="topUtilityBar">
     <div class="top-utility-left">
       <div class="live-status-badge">
         <span class="live-dot"></span>
         <span id="liveClockText">Riviera de São Lourenço • Carregando...</span>
       </div>
-      <span class="hidden sm:inline" style="color: rgba(255, 255, 255, 0.4);">|</span>
-      <span class="hidden sm:inline" style="color: rgba(255, 255, 255, 0.7);">24°C Céu Limpo • Bertioga, SP</span>
+      <span class="top-utility-extra" style="color: rgba(255, 255, 255, 0.4);">|</span>
+      <span class="top-utility-extra" style="color: rgba(255, 255, 255, 0.7);">24°C Céu Limpo • Bertioga, SP</span>
     </div>
 
     <div class="top-utility-right">
@@ -1558,7 +1702,8 @@
     </nav>
 
     <a href="#contato" class="nav-contact-link">
-      <span>Atendimento Privativo</span>
+      <span class="nav-btn-text-full">Atendimento Privativo</span>
+      <span class="nav-btn-text-short">Atendimento</span>
     </a>
   </header>
 
@@ -2448,7 +2593,11 @@
       const timeString = new Intl.DateTimeFormat('pt-BR', options).format(now);
       const clockEl = document.getElementById('liveClockText');
       if (clockEl) {
-        clockEl.textContent = `Riviera de São Lourenço • ${timeString} (GMT-3)`;
+        if (window.innerWidth <= 480) {
+          clockEl.textContent = `Riviera de São Lourenço • ${timeString}`;
+        } else {
+          clockEl.textContent = `Riviera de São Lourenço • ${timeString} (GMT-3)`;
+        }
       }
     }
     updateRivieraClock();
@@ -2458,11 +2607,14 @@
     // 4. Sticky Header Behavior
     // --------------------------------------------------------------------------
     const mainNavBar = document.getElementById('mainNavBar');
+    const topUtilityBar = document.getElementById('topUtilityBar');
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 45) {
+      if (window.scrollY > 35) {
         mainNavBar.classList.add('scrolled');
+        if (topUtilityBar) topUtilityBar.classList.add('scrolled-out');
       } else {
         mainNavBar.classList.remove('scrolled');
+        if (topUtilityBar) topUtilityBar.classList.remove('scrolled-out');
       }
     }, { passive: true });
 
